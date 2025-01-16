@@ -1,0 +1,29 @@
+2025-01-16 09:09:44,644 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:09:55,016 | INFO | "GET /form/ HTTP/1.1" 200 3056
+2025-01-16 09:10:10,654 | INFO | "POST /form/ HTTP/1.1" 200 1523
+2025-01-16 09:10:12,846 | INFO | "GET / HTTP/1.1" 200 2068
+2025-01-16 09:10:13,895 | INFO | "GET /list/ HTTP/1.1" 200 3527
+2025-01-16 09:10:52,213 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:10:52,575 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:11:24,836 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:11:25,156 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:12:43,695 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:12:44,134 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:13:05,397 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback_logger/urls.py changed, reloading.
+2025-01-16 09:13:05,738 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:13:41,081 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:13:41,449 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:13:46,549 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:13:46,769 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:13:48,854 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:13:49,069 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:13:59,188 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:13:59,400 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:14:06,512 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:14:06,741 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:14:24,935 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:14:25,154 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:14:32,267 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:14:32,480 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:14:37,574 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
+2025-01-16 09:14:37,824 | INFO | Watching for file changes with StatReloader

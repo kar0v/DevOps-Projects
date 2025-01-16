@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            background: #f9f9f9;
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .actions {
+            display: flex;
+            gap: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #4CAF50;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #45a049;
+        }
+
+        .delete-link {
+            color: red;
+        }
+
+        .delete-link:hover {
+            color: darkred;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Feedback List</h2>
+        {% if feedbacks %}
+        <ul>
+            {% for feedback in feedbacks %}
+            <li>
+                <div>
+                    <strong>{{ feedback.name }}</strong> ({{ feedback.email }}) - {{ feedback.created_at }}<br>
+                    {{ feedback.message }}<br>
+                </div>
+                <div class="actions">
+                    {% if feedback.attachment %}
+                        <a href="{{ feedback.attachment.url }}">Download Attachment</a>
+                    {% endif %}
+                    <a href="{% url 'update_feedback' feedback.id %}" class="update-link">Update</a>
+                    <a href="{% url 'delete_feedback' feedback.id %}" class="delete-link">Delete</a>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No feedback entries available yet.</p>
+        {% endif %}
+
+        <p><a href="javascript:history.back()" class="back-link">Go Back</a></p>
+    </div>
+</body>
+</html>

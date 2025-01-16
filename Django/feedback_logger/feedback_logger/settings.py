@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -37,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'feedback',
 ]
 
 MIDDLEWARE = [
@@ -77,16 +79,16 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'feedback_db',  
-        'USER': 'user',
-        'PASSWORD': 'password',
+        'USER': 'admin',
+        'PASSWORD': 'securepassword',
         'HOST': 'localhost',
         'PORT': '5432',
     },
     'localdev': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'feedback_db',  
-        'USER': 'user',
-        'PASSWORD': 'password',
+        'USER': 'admin',
+        'PASSWORD': 'securepassword',
         'HOST': 'localhost',
         'PORT': '5432',
     }
@@ -134,5 +136,37 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-MEDIA_ROOT = '/mnt/efs/media/'
+# MEDIA_ROOT = '/mnt/efs/media/'
+MEDIA_ROOT = '/tmp/efs/media/'
 MEDIA_URL = '/media/'
+
+# Logging Configuration
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(asctime)s | %(levelname)s | %(message)s'
+        },
+    },
+    'handlers': {
+        'file': {
+            'level': 'INFO',
+            'class': 'logging.FileHandler',
+            'filename': os.path.join(BASE_DIR, 'application.log'), 
+            'formatter': 'verbose',
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': True,
+        },
+        'application': {
+            'handlers': ['file'],
+            'level': 'INFO',
+            'propagate': False,
+        },
+    },
+}
