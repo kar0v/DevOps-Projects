@@ -1,0 +1,588 @@
+[
+    {
+        "label": "migrations",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "models",
+        "importPath": "django.db",
+        "description": "django.db",
+        "isExtraImport": true,
+        "detail": "django.db",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "admin",
+        "importPath": "django.contrib",
+        "description": "django.contrib",
+        "isExtraImport": true,
+        "detail": "django.contrib",
+        "documentation": {}
+    },
+    {
+        "label": "AppConfig",
+        "importPath": "django.apps",
+        "description": "django.apps",
+        "isExtraImport": true,
+        "detail": "django.apps",
+        "documentation": {}
+    },
+    {
+        "label": "TestCase",
+        "importPath": "django.test",
+        "description": "django.test",
+        "isExtraImport": true,
+        "detail": "django.test",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "path",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "include",
+        "importPath": "django.urls",
+        "description": "django.urls",
+        "isExtraImport": true,
+        "detail": "django.urls",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "get_object_or_404",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "redirect",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "render",
+        "importPath": "django.shortcuts",
+        "description": "django.shortcuts",
+        "isExtraImport": true,
+        "detail": "django.shortcuts",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "FileResponse",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "HttpResponseNotFound",
+        "importPath": "django.http",
+        "description": "django.http",
+        "isExtraImport": true,
+        "detail": "django.http",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "django.conf",
+        "description": "django.conf",
+        "isExtraImport": true,
+        "detail": "django.conf",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "django.core.cache",
+        "description": "django.core.cache",
+        "isExtraImport": true,
+        "detail": "django.core.cache",
+        "documentation": {}
+    },
+    {
+        "label": "cache",
+        "importPath": "django.core.cache",
+        "description": "django.core.cache",
+        "isExtraImport": true,
+        "detail": "django.core.cache",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "logging",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "logging",
+        "description": "logging",
+        "detail": "logging",
+        "documentation": {}
+    },
+    {
+        "label": "get_asgi_application",
+        "importPath": "django.core.asgi",
+        "description": "django.core.asgi",
+        "isExtraImport": true,
+        "detail": "django.core.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "config",
+        "importPath": "decouple",
+        "description": "decouple",
+        "isExtraImport": true,
+        "detail": "decouple",
+        "documentation": {}
+    },
+    {
+        "label": "Path",
+        "importPath": "pathlib",
+        "description": "pathlib",
+        "isExtraImport": true,
+        "detail": "pathlib",
+        "documentation": {}
+    },
+    {
+        "label": "get_wsgi_application",
+        "importPath": "django.core.wsgi",
+        "description": "django.core.wsgi",
+        "isExtraImport": true,
+        "detail": "django.core.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "Migration",
+        "kind": 6,
+        "importPath": "Django.feedback_logger.feedback.migrations.0001_initial",
+        "description": "Django.feedback_logger.feedback.migrations.0001_initial",
+        "peekOfCode": "class Migration(migrations.Migration):\n    initial = True\n    dependencies = [\n    ]\n    operations = [\n        migrations.CreateModel(\n            name='Feedback',\n            fields=[\n                ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),\n                ('name', models.CharField(max_length=100)),",
+        "detail": "Django.feedback_logger.feedback.migrations.0001_initial",
+        "documentation": {}
+    },
+    {
+        "label": "FeedbackConfig",
+        "kind": 6,
+        "importPath": "Django.feedback_logger.feedback.apps",
+        "description": "Django.feedback_logger.feedback.apps",
+        "peekOfCode": "class FeedbackConfig(AppConfig):\n    default_auto_field = 'django.db.models.BigAutoField'\n    name = 'feedback'",
+        "detail": "Django.feedback_logger.feedback.apps",
+        "documentation": {}
+    },
+    {
+        "label": "Feedback",
+        "kind": 6,
+        "importPath": "Django.feedback_logger.feedback.models",
+        "description": "Django.feedback_logger.feedback.models",
+        "peekOfCode": "class Feedback(models.Model):\n    name = models.CharField(max_length=100)\n    email = models.EmailField()\n    message = models.TextField()\n    attachment = models.FileField(upload_to='attachments/', null=True, blank=True)\n    created_at = models.DateTimeField(auto_now_add=True)\n    def __str__(self):\n        return self.name",
+        "detail": "Django.feedback_logger.feedback.models",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback.urls",
+        "description": "Django.feedback_logger.feedback.urls",
+        "peekOfCode": "urlpatterns = [\n    path('', views.landing_page, name='landing_page'),\n    path('form/', views.feedback_form, name='feedback_form'),\n    path('list/', views.feedback_list, name='feedback_list'),\n    path('media/<path:path>/', serve_media, name='serve_media'),\n    path('delete/<int:feedback_id>/', views.delete_feedback, name='delete_feedback'),\n    path('update/<int:feedback_id>/', views.update_feedback, name='update_feedback'), \n]",
+        "detail": "Django.feedback_logger.feedback.urls",
+        "documentation": {}
+    },
+    {
+        "label": "feedback_form",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "def feedback_form(request):\n    if request.method == 'POST':\n        name = request.POST['name']\n        email = request.POST['email']\n        message = request.POST['message']\n        attachment = request.FILES.get('attachment')\n        feedback = Feedback(name=name, email=email, message=message, attachment=attachment)\n        feedback.save()\n        cache.delete('recent_feedbacks')\n        logger.info(f\"Added Feedback | File: {attachment.name if attachment else 'No file'} | Email: {email}\")",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "feedback_list",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "def feedback_list(request):\n    # Try to get feedback data from the cache\n    cached_feedbacks = cache.get('recent_feedbacks')\n    if cached_feedbacks is None:\n        logger.info(\"Cache miss: Fetching feedbacks from the database.\")\n        feedbacks = Feedback.objects.all().order_by('-created_at')\n        # Cache the feedback data for 5 minutes (300 seconds)\n        cache.set('recent_feedbacks', feedbacks, timeout=3000)\n        logger.info(\"Feedbacks cached successfully.\")\n    else:",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "landing_page",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "def landing_page(request):\n    return render(request, 'landing_page.html')\ndef serve_media(request, path):\n    file_path = os.path.join(settings.MEDIA_ROOT, path)\n    if os.path.exists(file_path):\n        return FileResponse(open(file_path, 'rb'), as_attachment=True)\n    else:\n        return HttpResponseNotFound(\"File not found.\")\ndef delete_feedback(request, feedback_id):\n    feedback = get_object_or_404(Feedback, id=feedback_id)",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "serve_media",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "def serve_media(request, path):\n    file_path = os.path.join(settings.MEDIA_ROOT, path)\n    if os.path.exists(file_path):\n        return FileResponse(open(file_path, 'rb'), as_attachment=True)\n    else:\n        return HttpResponseNotFound(\"File not found.\")\ndef delete_feedback(request, feedback_id):\n    feedback = get_object_or_404(Feedback, id=feedback_id)\n    if request.method == 'POST':\n        feedback.delete()  ",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "delete_feedback",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "def delete_feedback(request, feedback_id):\n    feedback = get_object_or_404(Feedback, id=feedback_id)\n    if request.method == 'POST':\n        feedback.delete()  \n        cache.delete('recent_feedbacks')\n        logger.info(f\"Deleted Feedback | Email: {feedback.email} | Message: {feedback.message} | File: {feedback.attachment.name if feedback.attachment else 'No file'}\")\n        return redirect('feedback_list')  \n    return render(request, 'feedback/delete_feedback.html', {'feedback': feedback})\nfrom django.shortcuts import get_object_or_404, redirect, render\ndef update_feedback(request, feedback_id):",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "update_feedback",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "def update_feedback(request, feedback_id):\n    feedback = get_object_or_404(Feedback, id=feedback_id)\n    if request.method == 'POST':\n        old_message = feedback.message  # Capture the old message for logging\n        feedback.message = request.POST.get('message')\n        feedback.save()\n        cache.delete('recent_feedbacks')\n        # Optional: Log the update (if logging is enabled)\n        logger.info(f\"Updated Feedback ID {feedback.id} | Email: {feedback.email} | Old Message: {old_message} | New Message: {feedback.message}\")\n        return redirect('feedback_list')",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "logger",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback.views",
+        "description": "Django.feedback_logger.feedback.views",
+        "peekOfCode": "logger = logging.getLogger('application')\ndef feedback_form(request):\n    if request.method == 'POST':\n        name = request.POST['name']\n        email = request.POST['email']\n        message = request.POST['message']\n        attachment = request.FILES.get('attachment')\n        feedback = Feedback(name=name, email=email, message=message, attachment=attachment)\n        feedback.save()\n        cache.delete('recent_feedbacks')",
+        "detail": "Django.feedback_logger.feedback.views",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.asgi",
+        "description": "Django.feedback_logger.feedback_logger.asgi",
+        "peekOfCode": "application = get_asgi_application()",
+        "detail": "Django.feedback_logger.feedback_logger.asgi",
+        "documentation": {}
+    },
+    {
+        "label": "BASE_DIR",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "BASE_DIR = Path(__file__).resolve().parent.parent\n# Quick-start development settings - unsuitable for production\n# See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/\n# SECURITY WARNING: keep the secret key used in production secret!\nSECRET_KEY = 'django-insecure-22o0^f_=2q_08(=rr*fh#ru9@tzcdg8&b6l70upm9+9f6*^vqu'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['0.0.0.0']\n# Application definition\nINSTALLED_APPS = [",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "SECRET_KEY = 'django-insecure-22o0^f_=2q_08(=rr*fh#ru9@tzcdg8&b6l70upm9+9f6*^vqu'\n# SECURITY WARNING: don't run with debug turned on in production!\nDEBUG = True\nALLOWED_HOSTS = ['0.0.0.0']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "DEBUG = True\nALLOWED_HOSTS = ['0.0.0.0']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ALLOWED_HOSTS",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "ALLOWED_HOSTS = ['0.0.0.0']\n# Application definition\nINSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'feedback',",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "INSTALLED_APPS",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "INSTALLED_APPS = [\n    'django.contrib.admin',\n    'django.contrib.auth',\n    'django.contrib.contenttypes',\n    'django.contrib.sessions',\n    'django.contrib.messages',\n    'django.contrib.staticfiles',\n    'feedback',\n]\nMIDDLEWARE = [",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MIDDLEWARE",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "MIDDLEWARE = [\n    'django.middleware.security.SecurityMiddleware',\n    'django.contrib.sessions.middleware.SessionMiddleware',\n    'django.middleware.common.CommonMiddleware',\n    'django.middleware.csrf.CsrfViewMiddleware',\n    'django.contrib.auth.middleware.AuthenticationMiddleware',\n    'django.contrib.messages.middleware.MessageMiddleware',\n    'django.middleware.clickjacking.XFrameOptionsMiddleware',\n]\nROOT_URLCONF = 'feedback_logger.urls'",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ROOT_URLCONF",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "ROOT_URLCONF = 'feedback_logger.urls'\nTEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TEMPLATES",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "TEMPLATES = [\n    {\n        'BACKEND': 'django.template.backends.django.DjangoTemplates',\n        'DIRS': [],\n        'APP_DIRS': True,\n        'OPTIONS': {\n            'context_processors': [\n                'django.template.context_processors.debug',\n                'django.template.context_processors.request',\n                'django.contrib.auth.context_processors.auth',",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "WSGI_APPLICATION",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "WSGI_APPLICATION = 'feedback_logger.wsgi.application'\n# Database\n# https://docs.djangoproject.com/en/5.1/ref/settings/#databases\nDATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('DB_NAME'),  \n        'USER': config('DB_USER'),  \n        'PASSWORD': config('DB_PASSWORD'),  \n        'HOST': config('DB_HOST', default='localhost'), ",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DATABASES",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "DATABASES = {\n    'default': {\n        'ENGINE': 'django.db.backends.postgresql',\n        'NAME': config('DB_NAME'),  \n        'USER': config('DB_USER'),  \n        'PASSWORD': config('DB_PASSWORD'),  \n        'HOST': config('DB_HOST', default='localhost'), \n        'PORT': config('DB_PORT', default='5432'),  \n    },\n    'localdev': {",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "SECRET_KEY",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')\nDEBUG = config('DEBUG', default=True, cast=bool)\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEBUG",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "DEBUG = config('DEBUG', default=True, cast=bool)\n# Password validation\n# https://docs.djangoproject.com/en/5.1/ref/settings/#auth-password-validators\nAUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "AUTH_PASSWORD_VALIDATORS",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "AUTH_PASSWORD_VALIDATORS = [\n    {\n        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',\n    },\n    {\n        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',\n    },",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LANGUAGE_CODE",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "LANGUAGE_CODE = 'en-us'\nTIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "TIME_ZONE",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "TIME_ZONE = 'UTC'\nUSE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_ROOT = config('MEDIA_ROOT')",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_I18N",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "USE_I18N = True\nUSE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_ROOT = config('MEDIA_ROOT')\nMEDIA_URL = config('MEDIA_URL')",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "USE_TZ",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "USE_TZ = True\n# Static files (CSS, JavaScript, Images)\n# https://docs.djangoproject.com/en/5.1/howto/static-files/\nSTATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_ROOT = config('MEDIA_ROOT')\nMEDIA_URL = config('MEDIA_URL')\n# Logging Configuration",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "STATIC_URL = 'static/'\n# Default primary key field type\n# https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field\nDEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_ROOT = config('MEDIA_ROOT')\nMEDIA_URL = config('MEDIA_URL')\n# Logging Configuration\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "DEFAULT_AUTO_FIELD",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'\nMEDIA_ROOT = config('MEDIA_ROOT')\nMEDIA_URL = config('MEDIA_URL')\n# Logging Configuration\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '%(asctime)s | %(levelname)s | %(message)s'",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_ROOT",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "MEDIA_ROOT = config('MEDIA_ROOT')\nMEDIA_URL = config('MEDIA_URL')\n# Logging Configuration\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '%(asctime)s | %(levelname)s | %(message)s'\n        },",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "MEDIA_URL",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "MEDIA_URL = config('MEDIA_URL')\n# Logging Configuration\nLOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '%(asctime)s | %(levelname)s | %(message)s'\n        },\n    },",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "LOGGING",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "LOGGING = {\n    'version': 1,\n    'disable_existing_loggers': False,\n    'formatters': {\n        'verbose': {\n            'format': '%(asctime)s | %(levelname)s | %(message)s'\n        },\n    },\n    'handlers': {\n        'file': {",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "CACHES",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "CACHES = {\n    'default': {\n        'BACKEND': 'django_redis.cache.RedisCache',\n        'LOCATION': f\"redis://{config('REDIS_HOST', default='127.0.0.1')}:6379/1\",\n        'OPTIONS': {\n            'CLIENT_CLASS': 'django_redis.client.DefaultClient',\n        },\n        'KEY_PREFIX': 'feedback',  \n    }\n}",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "STATIC_URL",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.settings",
+        "description": "Django.feedback_logger.feedback_logger.settings",
+        "peekOfCode": "STATIC_URL = '/static/'",
+        "detail": "Django.feedback_logger.feedback_logger.settings",
+        "documentation": {}
+    },
+    {
+        "label": "urlpatterns",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.urls",
+        "description": "Django.feedback_logger.feedback_logger.urls",
+        "peekOfCode": "urlpatterns = [\n    path('admin/', admin.site.urls),\n    path('', include('feedback.urls')),  \n]",
+        "detail": "Django.feedback_logger.feedback_logger.urls",
+        "documentation": {}
+    },
+    {
+        "label": "application",
+        "kind": 5,
+        "importPath": "Django.feedback_logger.feedback_logger.wsgi",
+        "description": "Django.feedback_logger.feedback_logger.wsgi",
+        "peekOfCode": "application = get_wsgi_application()",
+        "detail": "Django.feedback_logger.feedback_logger.wsgi",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "Django.feedback_logger.manage",
+        "description": "Django.feedback_logger.manage",
+        "peekOfCode": "def main():\n    \"\"\"Run administrative tasks.\"\"\"\n    os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'feedback_logger.settings')\n    try:\n        from django.core.management import execute_from_command_line\n    except ImportError as exc:\n        raise ImportError(\n            \"Couldn't import Django. Are you sure it's installed and \"\n            \"available on your PYTHONPATH environment variable? Did you \"\n            \"forget to activate a virtual environment?\"",
+        "detail": "Django.feedback_logger.manage",
+        "documentation": {}
+    }
+]

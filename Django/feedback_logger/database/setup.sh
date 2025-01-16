@@ -1,5 +1,11 @@
 #!/bin/bash
-source .env
+DB_NAME="feedback_db"
+DB_USER="admin"
+DB_PASSWORD="securepassword" 
+DB_HOST="localhost"          
+DB_PORT="5432"               
+POSTGRES_PASSWORD="postgres"
+POSTGRES_USER="postgres"
 
 # Function to execute a PostgreSQL command
 execute_psql() {

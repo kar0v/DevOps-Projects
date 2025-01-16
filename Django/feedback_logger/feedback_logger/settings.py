@@ -10,6 +10,7 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
+from decouple import config
 from pathlib import Path
 import os
 
@@ -26,7 +27,7 @@ SECRET_KEY = 'django-insecure-22o0^f_=2q_08(=rr*fh#ru9@tzcdg8&b6l70upm9+9f6*^vqu
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0']
 
 
 # Application definition
@@ -75,24 +76,29 @@ WSGI_APPLICATION = 'feedback_logger.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'feedback_db',  
-        'USER': 'admin',
-        'PASSWORD': 'securepassword',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': config('DB_NAME'),  
+        'USER': config('DB_USER'),  
+        'PASSWORD': config('DB_PASSWORD'),  
+        'HOST': config('DB_HOST', default='localhost'), 
+        'PORT': config('DB_PORT', default='5432'),  
     },
     'localdev': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'feedback_db',  
-        'USER': 'admin',
-        'PASSWORD': 'securepassword',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST', default='localhost'),
+        'PORT': config('DB_PORT', default='5432'),
     }
 }
+
+SECRET_KEY = config('SECRET_KEY', default='your-default-secret-key')
+
+DEBUG = config('DEBUG', default=True, cast=bool)
 
 
 # Password validation
@@ -136,10 +142,8 @@ STATIC_URL = 'static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-# MEDIA_ROOT = '/mnt/efs/media/'
-MEDIA_ROOT = '/tmp/efs/media/'
-MEDIA_URL = '/media/'
-
+MEDIA_ROOT = config('MEDIA_ROOT')
+MEDIA_URL = config('MEDIA_URL')
 # Logging Configuration
 LOGGING = {
     'version': 1,
@@ -179,7 +183,7 @@ LOGGING = {
 CACHES = {
     'default': {
         'BACKEND': 'django_redis.cache.RedisCache',
-        'LOCATION': 'redis://127.0.0.1:6379/1',  
+        'LOCATION': f"redis://{config('REDIS_HOST', default='127.0.0.1')}:6379/1",
         'OPTIONS': {
             'CLIENT_CLASS': 'django_redis.client.DefaultClient',
         },
