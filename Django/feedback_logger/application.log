@@ -1,29 +1,30 @@
-2025-01-16 09:09:44,644 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:09:55,016 | INFO | "GET /form/ HTTP/1.1" 200 3056
-2025-01-16 09:10:10,654 | INFO | "POST /form/ HTTP/1.1" 200 1523
-2025-01-16 09:10:12,846 | INFO | "GET / HTTP/1.1" 200 2068
-2025-01-16 09:10:13,895 | INFO | "GET /list/ HTTP/1.1" 200 3527
-2025-01-16 09:10:52,213 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:10:52,575 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:11:24,836 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:11:25,156 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:12:43,695 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:12:44,134 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:13:05,397 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback_logger/urls.py changed, reloading.
-2025-01-16 09:13:05,738 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:13:41,081 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:13:41,449 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:13:46,549 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:13:46,769 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:13:48,854 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:13:49,069 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:13:59,188 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:13:59,400 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:14:06,512 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:14:06,741 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:14:24,935 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:14:25,154 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:14:32,267 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:14:32,480 | INFO | Watching for file changes with StatReloader
-2025-01-16 09:14:37,574 | INFO | /Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py changed, reloading.
-2025-01-16 09:14:37,824 | INFO | Watching for file changes with StatReloader
+2025-01-16 09:23:46,861 | WARNING | Not Found: /delete/3/
+2025-01-16 09:23:46,863 | WARNING | "GET /delete/3/ HTTP/1.1" 404 3732
+2025-01-16 09:24:04,984 | INFO | Added Feedback | File: No file | Email: kr.karov@gmail.com
+2025-01-16 09:24:24,413 | INFO | Deleted Feedback | Email: kr.karov@gmail.com | Message: teeeeeeest | File: No file
+2025-01-16 09:24:45,215 | WARNING | Not Found: /delete/5/
+2025-01-16 09:24:45,215 | WARNING | "GET /delete/5/ HTTP/1.1" 404 3732
+2025-01-16 09:27:52,746 | INFO | Added Feedback | File: ANS-C01 Study Guide.txt | Email: kr.karov@hotmail.com
+2025-01-16 09:34:00,906 | INFO | Added Feedback | File: No file | Email: kr.karov+komsed@gmail.com
+2025-01-16 09:34:11,242 | ERROR | Internal Server Error: /update/7/
+Traceback (most recent call last):
+  File "/Users/karov/.local/share/virtualenvs/feedback_logger-bf575s9K/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/karov/.local/share/virtualenvs/feedback_logger-bf575s9K/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py", line 48, in update_feedback
+    old_message = feedback.message
+                  ^^^^^^^^
+UnboundLocalError: cannot access local variable 'feedback' where it is not associated with a value
+2025-01-16 09:34:11,243 | ERROR | "GET /update/7/ HTTP/1.1" 500 69283
+2025-01-16 09:34:18,251 | ERROR | Internal Server Error: /update/6/
+Traceback (most recent call last):
+  File "/Users/karov/.local/share/virtualenvs/feedback_logger-bf575s9K/lib/python3.13/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/Users/karov/.local/share/virtualenvs/feedback_logger-bf575s9K/lib/python3.13/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/Users/karov/dev/DevOps-Projects/Django/feedback_logger/feedback/views.py", line 48, in update_feedback
+    old_message = feedback.message
+                  ^^^^^^^^
+UnboundLocalError: cannot access local variable 'feedback' where it is not associated with a value
+2025-01-16 09:34:18,252 | ERROR | "GET /update/6/ HTTP/1.1" 500 69283

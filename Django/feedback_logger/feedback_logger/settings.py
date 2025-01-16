@@ -153,20 +153,36 @@ LOGGING = {
         'file': {
             'level': 'INFO',
             'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'application.log'), 
+            'filename': os.path.join(BASE_DIR, 'application.log'),
             'formatter': 'verbose',
         },
     },
     'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'INFO',
-            'propagate': True,
-        },
         'application': {
             'handlers': ['file'],
             'level': 'INFO',
             'propagate': False,
         },
+        'django.server': {
+            'handlers': ['file'],
+            'level': 'WARNING',  
+            'propagate': False,
+        },
+        'django': {
+            'handlers': ['file'],
+            'level': 'WARNING',  
+            'propagate': False,
+        },
     },
+}
+
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1',  
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+        },
+        'KEY_PREFIX': 'feedback',  
+    }
 }

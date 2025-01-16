@@ -39,16 +39,30 @@ def delete_feedback(request, feedback_id):
     feedback = get_object_or_404(Feedback, id=feedback_id)
     if request.method == 'POST':
         feedback.delete()  
+        logger.info(f"Deleted Feedback | Email: {feedback.email} | Message: {feedback.message} | File: {feedback.attachment.name if feedback.attachment else 'No file'}")
         return redirect('feedback_list')  
     return render(request, 'feedback/delete_feedback.html', {'feedback': feedback})
 
 
 def update_feedback(request, feedback_id):
-    # Get the feedback object or return 404 if not found
+    old_message = feedback.message
     feedback = get_object_or_404(Feedback, id=feedback_id)
     if request.method == 'POST':
         feedback.message = request.POST.get('message')
         feedback.save()  
         logger.info(f"Updated Feedback | Email: {feedback.email} | Old Message: {old_message} | New Message: {feedback.message}")
         return redirect('feedback_list') 
+    return render(request, 'feedback/update_feedback.html', {'feedback': feedback})
+
+def update_feedback(request, feedback_id):
+    feedback = get_object_or_404(Feedback, id=feedback_id)
+
+    if request.method == 'POST':
+
+        old_message = feedback.message
+
+        feedback.message = request.POST.get('message')
+        feedback.save()
+        logger.info(f"Updated Feedback | Email: {feedback.email} | Old Message: {old_message} | New Message: {feedback.message}")
+        return redirect('feedback_list')  # Redirect to the feedback list page after updating
     return render(request, 'feedback/update_feedback.html', {'feedback': feedback})
