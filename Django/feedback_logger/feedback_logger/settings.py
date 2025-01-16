@@ -186,3 +186,5 @@ CACHES = {
         'KEY_PREFIX': 'feedback',  
     }
 }
+
+STATIC_URL = '/static/'

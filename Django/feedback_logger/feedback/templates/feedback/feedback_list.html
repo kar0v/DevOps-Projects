@@ -4,127 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Feedback List</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f9;
-            color: #333;
-            margin: 0;
-            padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        h2 {
-            color: #4CAF50;
-            text-align: center;
-            margin-bottom: 20px;
-        }
-
-        ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        li {
-            background: #f9f9f9;
-            margin: 10px 0;
-            padding: 15px;
-            border-radius: 5px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .feedback-details {
-            flex: 3;
-        }
-
-        .actions {
-            display: flex;
-            gap: 10px;
-            flex: 1;
-            justify-content: flex-end;
-        }
-
-        .action-link {
-            text-decoration: none;
-            color: #fff;
-            font-weight: bold;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-align: center;
-            font-size: 0.9em;
-            transition: background-color 0.3s ease;
-            display: inline-block;
-            min-width: 120px;
-        }
-
-        .download {
-            background-color: #4CAF50;
-        }
-
-        .download:hover {
-            background-color: #45a049;
-        }
-
-        .update {
-            {% comment %} background-color: #007BFF; {% endcomment %}
-            background-color: #4CAF50;
-
-        }
-
-        .update:hover {
-            background-color: #0056b3;
-        }
-
-        .delete {
-            background-color: #FF0000;
-        }
-
-        .delete:hover {
-            background-color: #cc0000;
-        }
-
-        .back-link {
-            margin-top: 15px;
-            display: block;
-            text-align: center;
-            color: #4CAF50;
-            font-weight: bold;
-            text-decoration: none;
-        }
-
-        .back-link:hover {
-            text-decoration: underline;
-        }
-    </style>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'feedback/styles.css' %}">
 </head>
 <body>
     <div class="container">
         <h2>Feedback List</h2>
         {% if feedbacks %}
-        <ul>
+        <ul class="feedback-list">
             {% for feedback in feedbacks %}
-            <li>
+            <li class="feedback-entry">
                 <div class="feedback-details">
                     <strong>{{ feedback.name }}</strong> ({{ feedback.email }}) - {{ feedback.created_at|date:"M. d, Y, g:i a" }}<br>
                     {{ feedback.message }}
                 </div>
-                <div class="actions">
+                <div class="feedback-actions">
                     {% if feedback.attachment %}
-                    <a href="{{ feedback.attachment.url }}" class="action-link download">Download</a>
+                    <a href="{{ feedback.attachment.url }}" class="btn btn-download">Download</a>
                     {% endif %}
-                    <a href="{% url 'update_feedback' feedback.id %}" class="action-link update">Update</a>
-                    <a href="{% url 'delete_feedback' feedback.id %}" class="action-link delete">Delete</a>
+                    <a href="{% url 'update_feedback' feedback.id %}" class="btn">Update</a>
+                    <a href="{% url 'delete_feedback' feedback.id %}" class="btn-delete">Delete</a>
                 </div>
             </li>
             {% endfor %}
@@ -132,7 +31,6 @@
         {% else %}
         <p>No feedback entries available yet.</p>
         {% endif %}
-
         <a href="/" class="back-link">Go to Home Page</a>
     </div>
 </body>
