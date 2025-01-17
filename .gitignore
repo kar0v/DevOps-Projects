@@ -1,2 +1,6 @@
 *.log
 __pycache__/
+.terraform*
+*.drawio.bkp
+terraform.tfstate*
+.vscode*
