@@ -7,3 +7,4 @@ terraform.tfvars
 .vscode*
 private.key
 public.key
+.env
