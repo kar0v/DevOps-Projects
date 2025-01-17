@@ -9,3 +9,8 @@ output "instance_private_key" {
   value       = tls_private_key.oei-key.private_key_pem
   sensitive   = true
 }
+
+output "instance_profile_name" {
+  value       = aws_iam_instance_profile.ssm_instance_profile.name
+  description = "Instance profile name for EC2 instances to use with Systems Manager."
+}

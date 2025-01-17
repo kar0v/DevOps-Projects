@@ -93,8 +93,35 @@ resource "aws_subnet" "bastion-c" {
   tags = {
     Name = "bastion-c"
   }
+}
 
 
+# internet gateway
+resource "aws_internet_gateway" "rds" {
+  vpc_id = aws_vpc.rds.id
+  tags = {
+    Name = "rds-igw"
+  }
+}
+
+resource "aws_route_table" "rds" {
+  vpc_id = aws_vpc.rds.id
+  route {
+    cidr_block = "10.200.0.0/16"
+    gateway_id = "local"
+  }
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = aws_internet_gateway.rds.id
+  }
+  tags = {
+    Name = "rds-rt"
+  }
+}
+
+resource "aws_main_route_table_association" "rds" {
+  vpc_id         = aws_vpc.rds.id
+  route_table_id = aws_route_table.rds.id
 }
 
 resource "aws_security_group" "rds" {
@@ -169,6 +196,18 @@ resource "aws_security_group" "bastion" {
   tags = {
     Name = "bastion-sg"
   }
+  ingress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+  egress {
+    from_port   = 443
+    to_port     = 443
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
 
 resource "aws_security_group" "redis" {
@@ -214,3 +253,22 @@ resource "aws_db_subnet_group" "rds" {
   }
 }
 
+
+
+# endpoints for SSM
+
+locals {
+  services = ["com.amazonaws.eu-central-1.ssm", "com.amazonaws.eu-central-1.ssmmessages", "com.amazonaws.eu-central-1.ec2messages"]
+}
+resource "aws_vpc_endpoint" "ssm" {
+  count               = length(local.services)
+  vpc_id              = aws_vpc.rds.id
+  service_name        = local.services[count.index]
+  vpc_endpoint_type   = "Interface"
+  private_dns_enabled = true
+  security_group_ids  = [aws_security_group.bastion.id]
+  subnet_ids          = [aws_subnet.rds-a.id, aws_subnet.rds-b.id, aws_subnet.rds-c.id]
+  tags = {
+    Name = "${local.services[count.index]}"
+  }
+}

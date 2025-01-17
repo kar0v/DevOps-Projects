@@ -18,6 +18,16 @@ module "rds" {
 
 # Redis
 
+
+resource "aws_elasticache_subnet_group" "redis_subnet_group" {
+  name       = "redis-subnet-group"
+  subnet_ids = [aws_subnet.rds-a.id, aws_subnet.rds-b.id, aws_subnet.rds-c.id]
+
+  tags = {
+    Name = "redis-subnet-group"
+  }
+}
+
 resource "aws_elasticache_cluster" "redis" {
   cluster_id           = "feedback-logger"
   engine               = "redis"
@@ -25,7 +35,7 @@ resource "aws_elasticache_cluster" "redis" {
   node_type            = "cache.t3.micro"
   num_cache_nodes      = 1
   parameter_group_name = "default.redis6.x"
-  subnet_group_name    = aws_db_subnet_group.rds.name
+  subnet_group_name    = aws_elasticache_subnet_group.redis_subnet_group.name
   security_group_ids   = [aws_security_group.redis.id]
   port                 = 6379
   maintenance_window   = "sun:05:00-sun:06:00"
