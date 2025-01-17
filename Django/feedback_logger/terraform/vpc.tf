@@ -64,6 +64,39 @@ resource "aws_subnet" "app-c" {
   }
 }
 
+
+resource "aws_subnet" "bastion-a" {
+  vpc_id                                      = aws_vpc.rds.id
+  cidr_block                                  = "10.200.30.0/24"
+  availability_zone                           = "eu-central-1a"
+  enable_resource_name_dns_a_record_on_launch = true
+  tags = {
+    Name = "bastion-a"
+  }
+}
+
+resource "aws_subnet" "bastion-b" {
+  vpc_id                                      = aws_vpc.rds.id
+  cidr_block                                  = "10.200.31.0/24"
+  availability_zone                           = "eu-central-1b"
+  enable_resource_name_dns_a_record_on_launch = true
+  tags = {
+    Name = "bastion-b"
+  }
+}
+
+resource "aws_subnet" "bastion-c" {
+  vpc_id                                      = aws_vpc.rds.id
+  cidr_block                                  = "10.200.32.0/24"
+  availability_zone                           = "eu-central-1c"
+  enable_resource_name_dns_a_record_on_launch = true
+  tags = {
+    Name = "bastion-c"
+  }
+
+
+}
+
 resource "aws_security_group" "rds" {
   name   = "rds-sg"
   vpc_id = aws_vpc.rds.id
@@ -99,6 +132,75 @@ resource "aws_security_group" "app" {
     protocol  = "tcp"
     self      = true
   }
+  tags = {
+    Name = "app-sg"
+  }
+}
+
+resource "aws_security_group" "bastion" {
+  name   = "bastion-sg"
+  vpc_id = aws_vpc.rds.id
+  ingress {
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+    self      = true
+  }
+  ingress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = var.allowed_ips
+
+  }
+  egress {
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = var.allowed_ips
+  }
+
+  egress {
+    from_port = 22
+    to_port   = 22
+    protocol  = "tcp"
+    self      = true
+  }
+  tags = {
+    Name = "bastion-sg"
+  }
+}
+
+resource "aws_security_group" "redis" {
+  name   = "redis-sg"
+  vpc_id = aws_vpc.rds.id
+  ingress {
+    from_port = 6379
+    to_port   = 6379
+    protocol  = "tcp"
+    self      = true
+  }
+  egress {
+    from_port = 6379
+    to_port   = 6379
+    protocol  = "tcp"
+    self      = true
+  }
+
+  ingress {
+    from_port   = 6379
+    to_port     = 6379
+    protocol    = "tcp"
+    cidr_blocks = [aws_subnet.app-a.cidr_block, aws_subnet.app-b.cidr_block, aws_subnet.app-c.cidr_block]
+  }
+  egress {
+    from_port   = 6379
+    to_port     = 6379
+    protocol    = "tcp"
+    cidr_blocks = [aws_subnet.app-a.cidr_block, aws_subnet.app-b.cidr_block, aws_subnet.app-c.cidr_block]
+  }
+
+
   tags = {
     Name = "app-sg"
   }
