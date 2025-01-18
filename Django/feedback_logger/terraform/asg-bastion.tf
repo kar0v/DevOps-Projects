@@ -45,16 +45,6 @@ data "aws_ami" "amzn" {
 
 }
 
-# SQS For autoscaling
-
-resource "aws_sqs_queue" "autoscaling" {
-  name = "autoscaling"
-}
-
-
-# KEY
-
-
 resource "tls_private_key" "oei-key" {
   algorithm = "RSA"
   rsa_bits  = 4096

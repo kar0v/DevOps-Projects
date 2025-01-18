@@ -124,139 +124,6 @@ resource "aws_main_route_table_association" "rds" {
   route_table_id = aws_route_table.rds.id
 }
 
-resource "aws_security_group" "rds" {
-  name   = "rds-sg"
-  vpc_id = aws_vpc.rds.id
-  ingress {
-    from_port = 5432
-    to_port   = 5432
-    protocol  = "tcp"
-    self      = true
-  }
-  egress {
-    from_port = 5432
-    to_port   = 5432
-    protocol  = "tcp"
-    self      = true
-  }
-  ingress {
-    from_port       = 5432
-    to_port         = 5432
-    protocol        = "tcp"
-    security_groups = [aws_security_group.bastion.id]
-  }
-  egress {
-    from_port       = 5432
-    to_port         = 5432
-    protocol        = "tcp"
-    security_groups = [aws_security_group.bastion.id]
-  }
-  tags = {
-    Name = "rds-sg"
-  }
-}
-
-resource "aws_security_group" "app" {
-  name   = "app-sg"
-  vpc_id = aws_vpc.rds.id
-  ingress {
-    from_port = 80
-    to_port   = 80
-    protocol  = "tcp"
-    self      = true
-  }
-  egress {
-    from_port = 80
-    to_port   = 80
-    protocol  = "tcp"
-    self      = true
-  }
-  tags = {
-    Name = "app-sg"
-  }
-}
-
-resource "aws_security_group" "bastion" {
-  name   = "bastion-sg"
-  vpc_id = aws_vpc.rds.id
-  ingress {
-    from_port = 22
-    to_port   = 22
-    protocol  = "tcp"
-    self      = true
-  }
-  ingress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = var.allowed_ips
-
-  }
-  egress {
-    from_port   = 22
-    to_port     = 22
-    protocol    = "tcp"
-    cidr_blocks = var.allowed_ips
-  }
-
-  egress {
-    from_port = 22
-    to_port   = 22
-    protocol  = "tcp"
-    self      = true
-  }
-  tags = {
-    Name = "bastion-sg"
-  }
-  ingress {
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-  egress {
-    from_port   = 443
-    to_port     = 443
-    protocol    = "tcp"
-    cidr_blocks = ["0.0.0.0/0"]
-  }
-}
-
-resource "aws_security_group" "redis" {
-  name   = "redis-sg"
-  vpc_id = aws_vpc.rds.id
-  ingress {
-    from_port = 6379
-    to_port   = 6379
-    protocol  = "tcp"
-    self      = true
-  }
-  egress {
-    from_port = 6379
-    to_port   = 6379
-    protocol  = "tcp"
-    self      = true
-  }
-
-  ingress {
-    from_port   = 6379
-    to_port     = 6379
-    protocol    = "tcp"
-    cidr_blocks = [aws_subnet.app-a.cidr_block, aws_subnet.app-b.cidr_block, aws_subnet.app-c.cidr_block]
-  }
-  egress {
-    from_port   = 6379
-    to_port     = 6379
-    protocol    = "tcp"
-    cidr_blocks = [aws_subnet.app-a.cidr_block, aws_subnet.app-b.cidr_block, aws_subnet.app-c.cidr_block]
-  }
-
-
-  tags = {
-    Name = "app-sg"
-  }
-}
-
 resource "aws_db_subnet_group" "rds" {
   name       = "rds-subnet-group"
   subnet_ids = [aws_subnet.rds-a.id, aws_subnet.rds-b.id, aws_subnet.rds-c.id]
@@ -278,9 +145,57 @@ resource "aws_vpc_endpoint" "ssm" {
   service_name        = local.services[count.index]
   vpc_endpoint_type   = "Interface"
   private_dns_enabled = true
-  security_group_ids  = [aws_security_group.bastion.id]
-  subnet_ids          = [aws_subnet.rds-a.id, aws_subnet.rds-b.id, aws_subnet.rds-c.id]
+  security_group_ids  = [aws_security_group.bastion.id, aws_security_group.app.id]
+  subnet_ids          = [aws_subnet.app-a.id, aws_subnet.app-b.id, aws_subnet.app-c.id]
   tags = {
     Name = "${local.services[count.index]}"
   }
+}
+
+# NAT GW
+resource "aws_eip" "nat" {
+  tags = {
+    Name = "nat-eip"
+  }
+}
+
+resource "aws_nat_gateway" "nat" {
+  allocation_id = aws_eip.nat.id
+  subnet_id     = aws_subnet.bastion-a.id
+  tags = {
+    Name = "nat-gateway"
+  }
+}
+
+# Private RT
+resource "aws_route_table" "private" {
+  vpc_id = aws_vpc.rds.id
+  route {
+    cidr_block = "10.200.0.0/16"
+    gateway_id = "local"
+  }
+
+  route {
+    cidr_block     = "0.0.0.0/0"
+    nat_gateway_id = aws_nat_gateway.nat.id
+  }
+  tags = {
+    Name = "rds-private-rt"
+  }
+}
+
+# associate the route table with the subnets
+resource "aws_route_table_association" "app-a" {
+  subnet_id      = aws_subnet.app-a.id
+  route_table_id = aws_route_table.private.id
+}
+
+resource "aws_route_table_association" "app-b" {
+  subnet_id      = aws_subnet.app-b.id
+  route_table_id = aws_route_table.private.id
+}
+
+resource "aws_route_table_association" "app-c" {
+  subnet_id      = aws_subnet.app-c.id
+  route_table_id = aws_route_table.private.id
 }
