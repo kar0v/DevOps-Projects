@@ -325,7 +325,7 @@ resource "aws_ecs_task_definition" "django" {
     {
       name      = "feedback-logger"
       image     = "${data.aws_caller_identity.current.account_id}.dkr.ecr.${local.region}.amazonaws.com/django:latest"
-      cpu       = 512
+      cpu       = 256
       memory    = 512
       essential = true
 
@@ -364,7 +364,7 @@ resource "aws_ecs_task_definition" "django" {
   #   }
   # }
 
-  cpu                      = 512
+  cpu                      = 256
   memory                   = 512
   requires_compatibilities = ["FARGATE"]
   network_mode             = "awsvpc"
