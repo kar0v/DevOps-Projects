@@ -1,4 +1,4 @@
-!/bin/bash
+#!/bin/bash
 DB_NAME="feedback_db"
 DB_USER="psql_admin"
 DB_PASSWORD="${DB_SECRET}"
